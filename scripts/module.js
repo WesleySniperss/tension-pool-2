@@ -579,6 +579,14 @@ Hooks.once("init", () => {
       gmOnly: "TENSION_POOL.Settings.RollVisibility.GMOnly"
     },
     default: "public"
+  }), m("playerAccess", {
+    name: "TENSION_POOL.Settings.PlayerAccess.Name",
+    hint: "TENSION_POOL.Settings.PlayerAccess.Hint",
+    scope: "world",
+    config: !0,
+    type: Boolean,
+    default: !1,
+    requiresReload: !0
   }), m("complicationMacro", {
     name: "TENSION_POOL.Settings.ComplicationMacro.Name",
     hint: "TENSION_POOL.Settings.ComplicationMacro.Hint",
@@ -706,6 +714,7 @@ Hooks.on("ready", async () => {
       }
     else
       return;
+  if (!game.user.isGM && !l("playerAccess")) return;
   w = new u(), w.render({ force: !0 });
   const o = x();
   game.modules.get(g).api = o, Hooks.callAll("tensionPool2Ready", o), game.user.isGM && l("exampleMacros") && R(), game.socket.on(`module.${g}`, (n) => {
