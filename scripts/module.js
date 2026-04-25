@@ -707,7 +707,23 @@ Hooks.on("ready", async () => {
     else
       return;
   if (!game.user.isGM) return;
-  w = new u(), w.render({ force: !0 });
+  w = new u();
+  w.render({ force: !0 });
+  if (window.VTools) {
+    setTimeout(() => { if (w?.element) w.element.style.display = "none"; }, 200);
+    window.VTools.onReady(() => {
+      window.VTools.register({
+        name: "tension-pool",
+        title: "Tension Pool",
+        icon: "fa-solid fa-skull",
+        onClick: () => {
+          if (!w) { w = new u(); w.render({ force: !0 }); return; }
+          if (!w.rendered) { w.render({ force: !0 }); return; }
+          if (w.element) w.element.style.display = w.element.style.display === "none" ? "" : "none";
+        }
+      });
+    });
+  }
   const o = x();
   game.modules.get(g).api = o, Hooks.callAll("tensionPool2Ready", o), game.user.isGM && l("exampleMacros") && R(), game.socket.on(`module.${g}`, (n) => {
     n.action === "announcement" && z(n.data);
