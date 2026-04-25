@@ -522,6 +522,21 @@ function K() {
   return game.modules.get(g)?.version ?? "0.0.0";
 }
 let w = null;
+Hooks.once("setup", () => {
+  if (!game.user.isGM || !window.VTools) return;
+  window.VTools.onReady(() => {
+    window.VTools.register({
+      name: "tension-pool",
+      title: "Tension Pool",
+      icon: "fa-solid fa-skull",
+      onClick: () => {
+        if (!w) { w = new u(); w.render({ force: !0 }); return; }
+        if (!w.rendered) { w.render({ force: !0 }); return; }
+        if (w.element) w.element.style.display = w.element.style.display === "none" ? "" : "none";
+      }
+    });
+  });
+});
 Hooks.once("init", () => {
   console.log("Tension Pool 2 | Initializing"), H(), m("windowPosition", {
     scope: "client",
@@ -709,21 +724,7 @@ Hooks.on("ready", async () => {
   if (!game.user.isGM) return;
   w = new u();
   w.render({ force: !0 });
-  if (window.VTools) {
-    setTimeout(() => { if (w?.element) w.element.style.display = "none"; }, 200);
-    window.VTools.onReady(() => {
-      window.VTools.register({
-        name: "tension-pool",
-        title: "Tension Pool",
-        icon: "fa-solid fa-skull",
-        onClick: () => {
-          if (!w) { w = new u(); w.render({ force: !0 }); return; }
-          if (!w.rendered) { w.render({ force: !0 }); return; }
-          if (w.element) w.element.style.display = w.element.style.display === "none" ? "" : "none";
-        }
-      });
-    });
-  }
+  if (window.VTools) setTimeout(() => { if (w?.element) w.element.style.display = "none"; }, 200);
   const o = x();
   game.modules.get(g).api = o, Hooks.callAll("tensionPool2Ready", o), game.user.isGM && l("exampleMacros") && R(), game.socket.on(`module.${g}`, (n) => {
     n.action === "announcement" && z(n.data);
