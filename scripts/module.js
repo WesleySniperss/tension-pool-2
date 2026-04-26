@@ -723,8 +723,7 @@ Hooks.on("ready", async () => {
       return;
   if (!game.user.isGM) return;
   w = new u();
-  w.render({ force: !0 });
-  if (window.VTools) setTimeout(() => { if (w?.element) w.element.style.display = "none"; }, 200);
+  if (!window.VTools) w.render({ force: !0 });
   const o = x();
   game.modules.get(g).api = o, Hooks.callAll("tensionPool2Ready", o), game.user.isGM && l("exampleMacros") && R(), game.socket.on(`module.${g}`, (n) => {
     n.action === "announcement" && z(n.data);
