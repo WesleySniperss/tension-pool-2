@@ -43,7 +43,7 @@
   "TENSION_POOL.Announce.TensionFades": "The tension fades...",
   "TENSION_POOL.Announce.PoolOverflows": "The pool overflows!",
   "TENSION_POOL.Disclaimer.Title": "Tension Pool 2 — AI-Generated Code Disclosure",
-  "TENSION_POOL.Disclaimer.Content": "<strong>Tension Pool 2</strong> contains AI-generated code. The author personally understands and maintains all code. You can review the source code at <a href=\"https://github.com/sagarc03/tension-pool-2\" target=\"_blank\">github.com/sagarc03/tension-pool-2</a>.<br><br>By clicking Accept, you consent to running this module. You may disable it at any time from the Module Management menu.",
+  "TENSION_POOL.Disclaimer.Content": "<strong>Tension Pool 2</strong> contains AI-generated code. The author personally understands and maintains all code. You can review the source code at <a href=\"https://github.com/WesleySniperss/tension-pool-2\" target=\"_blank\">github.com/WesleySniperss/tension-pool-2</a>.<br><br>By clicking Accept, you consent to running this module. You may disable it at any time from the Module Management menu.",
   "TENSION_POOL.Disclaimer.Accept": "Accept",
   "TENSION_POOL.Disclaimer.Decline": "Decline",
   "TENSION_POOL.Disclaimer.Disabled": "Tension Pool 2 is disabled until a GM accepts the AI-generated code disclaimer.",
