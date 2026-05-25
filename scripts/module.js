@@ -284,10 +284,6 @@ function E(t, e, o, n, i) {
 }
 const { ApplicationV2: Y, HandlebarsApplicationMixin: X } = foundry.applications.api;
 class u extends X(Y) {
-  async render(...args) {
-    if (!game.user?.isGM) return this;
-    return super.render(...args);
-  }
   static DEFAULT_OPTIONS = {
     id: "tension-pool",
     classes: ["tension-pool"],
