@@ -1,0 +1,6 @@
+node_modules/
+.vite/
+*.tsbuildinfo
+
+# Local tooling config — machine-specific paths, not shared
+.claude/

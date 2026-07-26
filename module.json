@@ -1,8 +1,8 @@
 {
-  "id": "tension-pool-2",
-  "title": "Tension Pool 2",
-  "description": "Tension Pool 2 is a Foundry (Re)Implementation and Evolution of the Angry GM's idea of Time Pools/Tension Pools",
-  "version": "0.7.0",
+  "id": "vtools-tension-pool",
+  "title": "VTools Tension Pool",
+  "description": "A VTools companion module: a Foundry (Re)Implementation and Evolution of the Angry GM's idea of Time Pools/Tension Pools. Adds its button to the VTools toolbar hub.",
+  "version": "1.0.0",
   "authors": [
     {
       "name": "WesleySniperss",
@@ -11,7 +11,7 @@
   ],
   "compatibility": {
     "minimum": "13",
-    "verified": "13"
+    "verified": "14.365"
   },
   "socket": true,
   "esmodules": [
@@ -20,11 +20,20 @@
   "styles": [
     "styles/module.css"
   ],
-  "url": "https://github.com/WesleySniperss/tension-pool-2",
-  "manifest": "https://github.com/WesleySniperss/tension-pool-2/releases/latest/download/module.json",
-  "download": "https://github.com/WesleySniperss/tension-pool-2/releases/download/v0.7.0/module.zip",
-  "bugs": "https://github.com/WesleySniperss/tension-pool-2/issues",
-  "changelog": "https://github.com/WesleySniperss/tension-pool-2/releases",
+  "relationships": {
+    "recommends": [
+      {
+        "id": "vtools",
+        "type": "module",
+        "reason": "Adds the Tension Pool button to the VTools toolbar hub. Without VTools the pool renders directly on screen."
+      }
+    ]
+  },
+  "url": "https://github.com/WesleySniperss/vtools-tension-pool",
+  "manifest": "https://github.com/WesleySniperss/vtools-tension-pool/releases/latest/download/module.json",
+  "download": "https://github.com/WesleySniperss/vtools-tension-pool/releases/download/v1.0.0/module.zip",
+  "bugs": "https://github.com/WesleySniperss/vtools-tension-pool/issues",
+  "changelog": "https://github.com/WesleySniperss/vtools-tension-pool/releases",
   "languages": [
     {
       "lang": "en",

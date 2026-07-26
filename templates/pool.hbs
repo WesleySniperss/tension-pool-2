@@ -1,23 +1,23 @@
-<div class="tp-wrapper">
-<div class="tp-cell tp-drag-handle" data-tooltip="TENSION_POOL.Title" data-tooltip-direction="LEFT"><i class="fa-solid fa-hourglass-half"></i></div>
-<div class="tp-cell">
+<div class="vtp-wrapper">
+<div class="vtp-cell vtp-drag-handle" data-tooltip="VTP.Title" data-tooltip-direction="LEFT"><i class="fa-solid fa-hourglass-half"></i></div>
+<div class="vtp-cell">
   <button type="button" class="ui-control {{toggleIcon}} icon" data-action="togglePool" data-tooltip="{{toggleTooltip}}" data-tooltip-direction="LEFT" aria-label="Toggle Pool"></button>
 </div>
 {{#if isGM}}
-<div class="tp-cell">
-  <button type="button" class="ui-control fa-solid fa-plus icon" data-action="addDie" data-tooltip="TENSION_POOL.AddDie" data-tooltip-direction="LEFT" aria-label="Add Die"></button>
+<div class="vtp-cell">
+  <button type="button" class="ui-control fa-solid fa-plus icon" data-action="addDie" data-tooltip="VTP.AddDie" data-tooltip-direction="LEFT" aria-label="Add Die"></button>
 </div>
-<div class="tp-cell">
-  <button type="button" class="ui-control fa-solid fa-minus icon" data-action="removeDie" data-tooltip="TENSION_POOL.RemoveDie" data-tooltip-direction="LEFT" aria-label="Remove Die"></button>
+<div class="vtp-cell">
+  <button type="button" class="ui-control fa-solid fa-minus icon" data-action="removeDie" data-tooltip="VTP.RemoveDie" data-tooltip-direction="LEFT" aria-label="Remove Die"></button>
 </div>
 {{/if}}
 {{#if collapsed}}
-<div class="tp-compact-icons" data-tooltip="{{tensionTooltip}}">
+<div class="vtp-compact-icons" data-tooltip="{{tensionTooltip}}">
   <i class="{{compactDisplayIcon}}"></i>
-  <span class="tp-compact-count">{{diceCount}}</span>
+  <span class="vtp-compact-count">{{diceCount}}</span>
 </div>
 {{else}}
-<div class="tp-icons" data-tooltip="{{tensionTooltip}}">
+<div class="vtp-icons" data-tooltip="{{tensionTooltip}}">
   {{#each icons}}
   <i class="{{this.class}}"></i>
   {{/each}}
@@ -25,21 +25,21 @@
 {{/if}}
 {{#unless collapsed}}
 {{#if isGM}}
-<div class="tp-cell">
-  <button type="button" class="ui-control fa-solid fa-dice icon" data-action="rollPool" data-tooltip="TENSION_POOL.Roll" data-tooltip-direction="RIGHT" aria-label="Roll Pool"></button>
+<div class="vtp-cell">
+  <button type="button" class="ui-control fa-solid fa-dice icon" data-action="rollPool" data-tooltip="VTP.Roll" data-tooltip-direction="RIGHT" aria-label="Roll Pool"></button>
 </div>
-<div class="tp-cell">
-  <button type="button" class="ui-control fa-solid fa-dice-d20 icon" data-action="customRoll" data-tooltip="TENSION_POOL.CustomRoll.Tooltip" data-tooltip-direction="RIGHT" aria-label="Custom Roll"></button>
+<div class="vtp-cell">
+  <button type="button" class="ui-control fa-solid fa-dice-d20 icon" data-action="customRoll" data-tooltip="VTP.CustomRoll.Tooltip" data-tooltip-direction="RIGHT" aria-label="Custom Roll"></button>
 </div>
 {{/if}}
 {{/unless}}
 {{#unless collapsed}}
 {{#if isGM}}
-<div class="tp-cell">
-  <button type="button" class="ui-control fa-solid fa-layer-plus icon" data-action="bulkAdd" data-tooltip="TENSION_POOL.BulkAdd.Tooltip" data-tooltip-direction="RIGHT" aria-label="Bulk Add"></button>
+<div class="vtp-cell">
+  <button type="button" class="ui-control fa-solid fa-layer-plus icon" data-action="bulkAdd" data-tooltip="VTP.BulkAdd.Tooltip" data-tooltip-direction="RIGHT" aria-label="Bulk Add"></button>
 </div>
-<div class="tp-cell">
-  <button type="button" class="ui-control fa-solid fa-xmark icon" data-action="clearPool" data-tooltip="TENSION_POOL.Clear" data-tooltip-direction="RIGHT" aria-label="Clear Pool"></button>
+<div class="vtp-cell">
+  <button type="button" class="ui-control fa-solid fa-xmark icon" data-action="clearPool" data-tooltip="VTP.Clear" data-tooltip-direction="RIGHT" aria-label="Clear Pool"></button>
 </div>
 {{/if}}
 {{/unless}}
